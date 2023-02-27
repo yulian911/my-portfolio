@@ -1,5 +1,5 @@
 .navigation {
-  @apply relative w-[400px] h-[60px] bg-white rounded-[10px] flex justify-center items-center text-black;
+  @apply relative w-[365px] sm:w-[450px] h-[60px] bg-white rounded-[10px] flex justify-center items-center text-black;
 }
 
 .navigation ul {

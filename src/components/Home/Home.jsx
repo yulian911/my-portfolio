@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
-import css from './home.module.css'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { Link } from 'react-scroll'
+import React, { useEffect } from 'react';
+import css from './home.module.css';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-scroll';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { BsLinkedin } from 'react-icons/bs';
 const Home = ({ setSelect }) => {
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+  const control = useAnimation();
+  const [ref, inView] = useInView();
 
   const list = {
     hidden: { opacity: 0 },
     vissible: { opacity: 1 },
-  }
+  };
 
   const item = {
     vissible: {
@@ -27,7 +29,7 @@ const Home = ({ setSelect }) => {
       opacity: 0,
       x: '100%',
     },
-  }
+  };
 
   const item2 = {
     vissible: {
@@ -44,15 +46,15 @@ const Home = ({ setSelect }) => {
       opacity: 0,
       x: '-100%',
     },
-  }
+  };
 
   useEffect(() => {
     if (inView) {
-      control.start('vissible')
+      control.start('vissible');
     } else {
-      control.start('hidden')
+      control.start('hidden');
     }
-  }, [control, inView])
+  }, [control, inView]);
 
   return (
     <motion.div
@@ -64,10 +66,13 @@ const Home = ({ setSelect }) => {
       <h1 className={css.title}>PORTFOLIO</h1>
 
       <div className={css.circle}>
-        <h3 className={`${css.gradient} absolute z-10 top-[5%] left-[39%]  md:left-[43%] `}>
+        <h3
+          className={`${css.gradient} absolute z-10 top-[5%] left-[39%]  md:left-[43%] font-bold `}>
           My Design
         </h3>
-        <h3 className={`${css.gradient} absolute z-10 bottom-[3%] left-[45%] md:left-[47%]`}>
+
+        <h3
+          className={`${css.gradient} absolute z-10 bottom-[3%] left-[45%] md:left-[47%] font-bold `}>
           2023
         </h3>
         <div className="w-full h-full bg-slate-800 rounded-[50%] ">
@@ -82,8 +87,16 @@ const Home = ({ setSelect }) => {
           More Powerfull
         </motion.h2>
       </div>
+      {/* <div className="absolute bottom-[5%] left-[48%] flex gap-2">
+        <button className="w-[35px] h-[35px] bg-black rounded-sm ">
+          <AiFillGithub size={35} color="white" />
+        </button>
+        <button className="w-[35px] h-[35px] bg-blue rounded-sm">
+          <BsLinkedin size={35} color="#0A66C2" />
+        </button>
+      </div> */}
     </motion.div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
