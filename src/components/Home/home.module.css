@@ -61,7 +61,7 @@
 }
 
 .bottomBox {
-  @apply absolute bottom-[10%] text-center flex gap-3;
+  @apply absolute  bottom-[15%] md:bottom-[10%] text-center flex gap-3;
 }
 
 .bottomText {

@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
-import css from './home.module.css';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-scroll';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { BsLinkedin } from 'react-icons/bs';
+import React, { useEffect } from 'react'
+import css from './home.module.css'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-scroll'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { BsLinkedin } from 'react-icons/bs'
 const Home = ({ setSelect }) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
+  const control = useAnimation()
+  const [ref, inView] = useInView()
 
   const list = {
     hidden: { opacity: 0 },
-    vissible: { opacity: 1 },
-  };
+    visible: { opacity: 1 },
+  }
 
   const item = {
-    vissible: {
+    visible: {
       opacity: 1,
       x: 0,
       transition: {
@@ -29,10 +29,10 @@ const Home = ({ setSelect }) => {
       opacity: 0,
       x: '100%',
     },
-  };
+  }
 
   const item2 = {
-    vissible: {
+    visible: {
       opacity: 1,
       x: 0,
       transition: {
@@ -46,15 +46,15 @@ const Home = ({ setSelect }) => {
       opacity: 0,
       x: '-100%',
     },
-  };
+  }
 
   useEffect(() => {
     if (inView) {
-      control.start('vissible');
+      control.start('visible')
     } else {
-      control.start('hidden');
+      control.start('hidden')
     }
-  }, [control, inView]);
+  }, [control, inView])
 
   return (
     <motion.div
@@ -62,7 +62,7 @@ const Home = ({ setSelect }) => {
       animate={control}
       variants={list}
       ref={ref}
-      className="flex h-[100vh]  justify-center items-center flex-col relative">
+      className="flex h-[100vh] w-full overflow-hidden justify-center items-center flex-col relative">
       <h1 className={css.title}>PORTFOLIO</h1>
 
       <div className={css.circle}>
@@ -96,7 +96,7 @@ const Home = ({ setSelect }) => {
         </button>
       </div> */}
     </motion.div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

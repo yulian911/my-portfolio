@@ -16,7 +16,7 @@ const About = () => {
         </div>
         <div className={css.content}>
           <div className={css.box}>
-            <div className={css.contentBx}>
+            {/* <div className={css.contentBx}>
               <GiEarthAsiaOceania />
               <h2>Web Develop</h2>
 
@@ -26,10 +26,22 @@ const About = () => {
                 impedit enim perferendis placeat rem odio.
               </p>
               <button>Learn More</button>
+            </div> */}
+            <div className="card-about rgb">
+              <div className="card-text">
+                {/* <span className="date">4 days ago</span> */}
+                <h2>About me</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam possimus,
+                  debitis, provident veniam architecto delectus unde voluptatibus necessitatibus
+                  esse est.
+                </p>
+              </div>
+              <div className="card-image"></div>
             </div>
           </div>
           <div className={css.box}>
-            <div className={css.contentBx}>
+            {/* <div className={css.contentBx}>
               <GiLargePaintBrush />
 
               <h2>Graphits</h2>
@@ -39,10 +51,22 @@ const About = () => {
                 impedit enim perferendis placeat rem odio.
               </p>
               <button>Learn More</button>
+            </div> */}
+            <div className="card-about rgb">
+              <div className="card-text">
+                {/* <span className="date">4 days ago</span> */}
+                <h2>About me</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam possimus,
+                  debitis, provident veniam architecto delectus unde voluptatibus necessitatibus
+                  esse est.
+                </p>
+              </div>
+              <div className="card-image"></div>
             </div>
           </div>
           <div className={css.box}>
-            <div className={css.contentBx}>
+            {/* <div className={css.contentBx}>
               <GiPhotoCamera />
               <h2>Photography</h2>
               <p>
@@ -51,6 +75,18 @@ const About = () => {
                 impedit enim perferendis placeat rem odio.
               </p>
               <button>Learn More</button>
+            </div> */}
+            <div className="card-about rgb">
+              <div className="card-text">
+                {/* <span className="date">4 days ago</span> */}
+                <h2>About me</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam possimus,
+                  debitis, provident veniam architecto delectus unde voluptatibus necessitatibus
+                  esse est.
+                </p>
+              </div>
+              <div className="card-image"></div>
             </div>
           </div>
         </div>

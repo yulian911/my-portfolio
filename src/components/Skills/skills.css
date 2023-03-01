@@ -1,0 +1,102 @@
+.skills-container {
+  position: relative;
+  /* display: grid;
+    grid-template-columns: minmax(300px, 400px);
+    grid-template-areas: 'image' 'text' 'stats';
+    grid-template-rows: 250px 300px 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  /* background: #1d1d1d; */
+  color: white;
+  text-align: justify;
+
+  font-family: roboto;
+  padding: 10px;
+}
+.skills-container > * {
+  flex: 1;
+}
+.skills-container .skills-text-box {
+  flex-basis: 100px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-container .skills-text-box .skills-text {
+  @apply text-[2.75rem] md:text-[3.75rem] lg:text-[4.75rem];
+
+  font-weight: 800;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+}
+
+.skills-container .skills-box {
+  flex-basis: 500px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+}
+.skills-container .skills-box .skills-item {
+  @apply w-[45px] h-[45px] md:w-[70px] md:h-[70px] lg:w-[90px] lg:h-[90px] xl:w-[150px] xl:h-[150px];
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills-container .skills-experience {
+  flex-basis: 500px;
+  flex-grow: 1;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.skills-container .skills-experience .skills-exp-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+.skills-container .skills-experience .skills-exp-item .skills-exp-works {
+  flex: 1;
+}
+.skills-container .skills-experience .skills-exp-item .skills-exp-works .skills-exp-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.skills-exp-year {
+  margin-right: 3rem;
+}
+.skills-exp-year p {
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+
+.skills-tooltip {
+  max-width: 300px !important;
+  background-color: #313bac !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+  padding: 1rem !important;
+  color: #6b7688 !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem !important;
+    max-width: 500px !important;
+    line-height: 2 !important;
+  }
+}
