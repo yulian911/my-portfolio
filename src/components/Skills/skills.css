@@ -33,27 +33,40 @@
 }
 
 .skills-container .skills-box {
-  flex-basis: 500px;
+  flex-basis: 300px;
+  /* height: 200px; */
   flex-grow: 1;
   display: flex;
+  justify-content: center;
+  /* align-items: center; */
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   padding: 15px;
 }
+
+/* .skills-container .skills-box > * {
+  flex: 1;
+} */
 .skills-container .skills-box .skills-item {
   @apply w-[45px] h-[45px] md:w-[70px] md:h-[70px] lg:w-[90px] lg:h-[90px] xl:w-[150px] xl:h-[150px];
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #313bac;
+  border-radius: 50%;
+}
+.skills-container .skills-box .skills-item img {
+  width: 50%;
+  height: 50%;
 }
 .skills-container .skills-experience {
   flex-basis: 500px;
   flex-grow: 1;
   flex: 1;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .skills-container .skills-experience .skills-exp-item {
@@ -64,8 +77,14 @@
   align-items: flex-start;
   margin: 1rem 0;
 }
-.skills-container .skills-experience .skills-exp-item .skills-exp-works {
+/* .skills-exp-works {
   flex: 1;
+} */
+.skills-exp-works:has(h4) {
+  font-weight: 800;
+  color: white;
+  text-align: left;
+  @apply text-[0.9rem] sm:text-[1rem] lg:text-[2rem];
 }
 .skills-container .skills-experience .skills-exp-item .skills-exp-works .skills-exp-work {
   display: flex;
@@ -78,9 +97,11 @@
 .skills-exp-year {
   margin-right: 3rem;
 }
-.skills-exp-year p {
+.skills-exp-year:has(p) {
   font-weight: 800;
-  color: var(--secondary-color);
+  color: #313bac;
+  text-align: left;
+  @apply text-[0.9rem] sm:text-[1rem] lg:text-[2rem];
 }
 
 .skills-tooltip {
