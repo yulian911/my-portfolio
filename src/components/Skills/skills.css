@@ -121,3 +121,82 @@
     line-height: 2 !important;
   }
 }
+
+/* test  */
+
+.testContainer {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* background: #1d1d1d; */
+  color: white;
+  /* text-align: justify; */
+  font-family: roboto;
+  padding: 15%;
+  overflow: hidden;
+}
+
+/* .testContainer > * {
+  flex: 1;
+} */
+
+.textContainer {
+  flex-basis: 200px;
+  flex-grow: 1;
+  display: flex;
+  /* background-color: #313bac; */
+  justify-content: center;
+  align-items: center;
+}
+.skillsContainer {
+  flex-basis: 600px;
+  flex-grow: 9999;
+  display: flex;
+  /* background-color: yellow; */
+  justify-content: center;
+  align-items: center;
+}
+.experienceContainer {
+  flex-basis: 600px;
+  flex-grow: 1;
+  @apply flex justify-start items-center xl:items-start;
+
+  /* background-color: green; */
+  justify-content: flex-start;
+
+  flex-direction: column;
+  padding: 10px;
+}
+
+.experienceYears {
+  display: flex;
+  /* background: #000; */
+}
+
+.skills-exp-year:has(p) {
+  font-weight: 800;
+  color: #313bac;
+  text-align: left;
+  @apply text-[0.9rem] sm:text-[1rem] lg:text-[1.5rem];
+}
+
+.experienceWorks {
+  /* background-color: #313bac; */
+}
+
+.skills-exp-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.skills-exp-work:has(h4) {
+  font-weight: 800;
+  color: white;
+  text-align: left;
+  @apply text-[0.9rem] sm:text-[1rem] lg:text-[1.5rem];
+}

@@ -1,20 +1,19 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
-import { js, node } from '../../assets'
+import { css, git, html, js, node, react, redux, typescript } from '../../assets'
 import './skills.css'
 import 'react-tooltip/dist/react-tooltip.css'
 
 const data = [
   { name: 'JS', icon: js },
   { name: 'Node', icon: node },
-  { name: 'React', icon: js },
-  { name: 'React', icon: js },
-  { name: 'React', icon: js },
-  { name: 'React', icon: js },
-  { name: 'React', icon: js },
-  { name: 'React', icon: js },
-  { name: 'React', icon: js },
+  { name: 'React', icon: redux },
+  { name: 'React', icon: react },
+  { name: 'React', icon: typescript },
+  { name: 'React', icon: html },
+  { name: 'React', icon: git },
+  { name: 'React', icon: css },
 ]
 const exp = [
   {

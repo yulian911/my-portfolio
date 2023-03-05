@@ -8,7 +8,7 @@ const SectionContainer = ({ children, id, refProps }) => {
       ref={refProps}
       // whileInView={{ y: [0, 50, 0], opacity: [0, 0, 1] }}
       transition={{ duration: 0.5 }}
-      className={`w-full h-[100svh]  z-[-2]`}>
+      className={`w-full h-[100svh]  z-[-2] scrollSection`}>
       {children}
     </motion.section>
   )

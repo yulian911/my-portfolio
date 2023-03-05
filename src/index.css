@@ -17,8 +17,14 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-/* .App {
+.App {
   @apply w-full h-[100svh];
+  /* overflow-y: scroll; */
+  /* scroll-snap-type: y mandatory; */
+}
+/* .scrollSection {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 } */
 
 .nav-link {

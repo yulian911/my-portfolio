@@ -7,6 +7,7 @@ import Home from './components/Home/Home'
 import MobileNavigation from './components/Navigation/MobileNavigation'
 import Navbar from './components/Navigation/Navbar'
 import Skills from './components/Skills/Skills'
+import SkillsTest from './components/Skills/SkillsTest'
 
 function App() {
   const [select, setSelect] = useState(0)
@@ -65,7 +66,8 @@ function App() {
         <About />
       </SectionContainer>
       <SectionContainer id="#Skills" refProps={skillsRef}>
-        <Skills />
+        {/* <Skills /> */}
+        <SkillsTest />
       </SectionContainer>
       <SectionContainer id="#Gallery" refProps={galleryRef}>
         <Gallery />
