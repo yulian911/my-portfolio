@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import css from './home.module.css'
 import { motion, useAnimation } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
-import { Link } from 'react-scroll'
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import { BsLinkedin } from 'react-icons/bs'
+// import { Link } from 'react-scroll'
+import { MdAdminPanelSettings } from 'react-icons/md'
+
 const Home = ({ setSelect }) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
@@ -62,9 +63,21 @@ const Home = ({ setSelect }) => {
       animate={control}
       variants={list}
       ref={ref}
-      className="flex h-[100vh] w-full overflow-hidden justify-center items-center flex-col relative">
+      className="flex h-[100vh] w-full overflow-hidden justify-center items-center flex-col relative ">
       <h1 className={css.title}>PORTFOLIO</h1>
-
+      <div className="w-[500px]   absolute top-[10px] right-[20px] flex justify-end ">
+        <div className={`${css.adminButton} `}>
+          <div className={`${css.inner}`}>
+            <Link to="/login" className={`${css.modalButton}`}>
+              <p>Admin Panel</p>
+            </Link>
+            <span className={`${css.iconContainer}`}>
+              {/* <AiOutlineInfoCircle /> */}
+              <MdAdminPanelSettings size={35} />
+            </span>
+          </div>
+        </div>
+      </div>
       <div className={css.circle}>
         <h3
           className={`${css.gradient} absolute z-10 top-[5%] left-[39%]  md:left-[43%] font-bold `}>

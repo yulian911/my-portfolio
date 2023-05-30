@@ -70,8 +70,8 @@ const exp = [
 
 const Skills = () => {
   return (
-    <div className="flex h-[100svh] pt-[100px]   justify-center items-center">
-      <div className="flex basis-[70%] m-5 flex-col   ">
+    <div className="flex h-[100svh]   justify-center items-center">
+      <div className="flex basis-[70%] m-1 flex-col   ">
         <div className="skills-container">
           <div className="skills-text-box">
             <h2 className="skills-text">Skills & Experiences</h2>

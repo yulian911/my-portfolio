@@ -61,9 +61,71 @@
 }
 
 .bottomBox {
-  @apply absolute  bottom-[15%] md:bottom-[10%] text-center flex gap-3;
+  @apply absolute  bottom-[17%] md:bottom-[10%] text-center flex gap-3;
 }
 
 .bottomText {
   @apply sm:text-[1.2em] md:text-[1.2em] lg:text-[1.4em] xl:text-[1.5em];
+}
+.adminButton {
+  /* @apply absolute top-[10px] right-[20px]; */
+  display: flex;
+  /* background-color: #3c40c6; */
+  width: 50%;
+  /* height: 70%; */
+  color: white;
+}
+
+.inner {
+  @apply bg-gradient-to-r from-[#ad6ce5] via-[#f395ae] to-[#fab466];
+
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 100%;
+  clip-path: circle(10% at 90% 50%);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.inner:hover {
+  clip-path: circle(75%);
+  background-color: blue;
+}
+.iconContainer {
+  width: 10%;
+  /* height: 30%; */
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: blue; */
+  color: white;
+  font-weight: bold;
+  transition: color 0.5s;
+  position: absolute;
+  top: 17px;
+  right: 6px;
+  /* margin-right: 4%; */
+}
+.inner .iconContainer svg {
+  /* @apply text-transparent bg-clip-text bg-gradient-to-r from-[#ad6ce5] via-[#f395ae] to-[#fab466]; */
+  color: #3c40c6;
+  /* font-size: 230%; */
+}
+.inner:hover .iconContainer svg {
+  color: #fab466;
+}
+.modalButton {
+  background-color: white;
+  padding: 6px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalButton svg {
+  color: #3c40c6;
+}
+.modalButton p {
+  @apply text-[#3c40c6] uppercase;
 }

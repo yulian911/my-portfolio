@@ -9,7 +9,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(30 41 59);
+  background-color: #1d1d1e;
+  /* background-color: rgb(30 41 59); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,7 +34,8 @@
   padding: 12px 20px;
   color: #fff;
   width: 100%;
-  font-size: 17px;
+  /* font-size: 17px; */
+  @apply text-[17px];
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
@@ -66,6 +68,7 @@
   grid-template-columns: minmax(300px, 400px);
   grid-template-areas: 'image' 'text' 'stats';
   grid-template-rows: 250px 300px 20px; */
+  max-width: 1280px;
   display: flex;
   flex-wrap: wrap;
   background: #1d1d1d;
@@ -77,6 +80,7 @@
 }
 .card-about .card-image {
   background: radial-gradient(#fff0 0%, #fff0 40%, #1d1d1d 100%), url('./assets/img1.jpg');
+  background-size: cover;
   flex-basis: 300px;
   flex-grow: 99999;
   height: 30svh;
@@ -104,8 +108,9 @@
   font-size: 13px;
 }
 .card-about .card-text p {
+  @apply sm:text-[1.2em] md:text-[1.2em] lg:text-[1.4em] xl:text-[1.3em];
   color: grey;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 300;
 }
 .card-about .card-text h2 {
@@ -139,4 +144,124 @@
   transform: translateZ(-1px); /*or z-index */
   z-index: -1;
   @apply animate-pulse;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* overflow-y:scroll ; */
+}
+
+/* Login  */
+
+.loginContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background: white; */
+}
+
+.loginContainer .containerScene {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 100vh;
+  background: url('./assets/bg.jpg');
+  /* background-size: 100%; */
+}
+.loginContainer .containerScene #scene .layer {
+  position: absolute;
+  inset: 0;
+}
+.loginContainer .containerScene #scene .layer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.loginBox {
+  position: relative;
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+.loginBox h2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+.loginBox .inputBoxLogin input {
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  font-size: 1.25em;
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.loginBox .inputBoxLogin ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.loginBox .inputBoxLogin #btn {
+  position: relative;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #2c3c99, #00b0ff);
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  box-shadow: none;
+  /* transition: 0.5s; */
+}
+.loginBox .group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.loginBox .group a {
+  font-size: 1.25em;
+  color: #fff;
+}
+.loginBox .group a:nth-child(2) {
+  text-decoration: underline;
+}
+/* Spinner  */
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

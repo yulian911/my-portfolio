@@ -1,0 +1,99 @@
+.navigationNavBar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navigationNavBar.active {
+  width: 360px;
+}
+.navigationNavBar li {
+  transition: 0.5s;
+
+  transform: scale(0);
+}
+.navigationNavBar.active li {
+  transition-delay: 0.75s;
+
+  transform: scale(1);
+}
+.navigationNavBar li a {
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 10px;
+  padding: 4px 4px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+/* .navigationNavBar li a:hover {
+  background-color: var(--crl);
+  color: #fff;
+} */
+.navigationNavBar li a.active {
+  background-color: var(--crl);
+  color: #fff;
+}
+.navigationNavBar .toggleNavBar {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.navigationNavBar.active .toggleNavBar {
+  background: #ff4181;
+  transform: translateY(-50px);
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+.navigationNavBar .toggleNavBar::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(-5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.navigationNavBar .toggleNavBar::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.navigationNavBar.active .toggleNavBar::before {
+  transition-delay: 0s;
+  background: white;
+  transform: translateY(0px) rotate(45deg) scale(0.6);
+}
+.navigationNavBar.active .toggleNavBar::after {
+  transition-delay: 0s;
+  background: white;
+  transform: translateY(0px) rotate(315deg) scale(0.6);
+}
