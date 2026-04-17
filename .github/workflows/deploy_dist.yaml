@@ -52,9 +52,21 @@ jobs:
 
       - name: Build project
         run: npm run build
+      - name: Upload dist folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-folder
+          path: dist
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Download dist folder
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-folder
       - name: deploy dist folder
-        run: echo "Deploying dist folder..."
+        run: |
+          echo "deploying below dist folder"
+          ls dist
+          echo "Complete!"
