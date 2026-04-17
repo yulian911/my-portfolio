@@ -1,12 +1,17 @@
 name: "Setup Node.js and install dependencies"
 description: "Sets up Node.js environment and installs dependencies for the project."
+inputs:
+  node-version:
+    description: "The version of Node.js to set up (e.g., '14', '16', '18', '20', '22')."
+    required: false
+    default: "22"
 runs:
   using: "composite"
   steps:
     - name: "Setup Node.js"
       uses: actions/setup-node@v4
       with:
-        node-version: 22
+        node-version: ${{ inputs.node-version }}
         cache: npm
 
     - name: "Cache node modules"

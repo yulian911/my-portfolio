@@ -18,15 +18,10 @@ jobs:
       - name: Get latest code
         uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
       - name: Setup Node.js and install dependencies
         uses: ./.github/actions/setup_node
-
+        with:
+          node-version: 22
       - name: Run test
         run: npm run test
   build:
@@ -35,13 +30,6 @@ jobs:
     steps:
       - name: Get latest code
         uses: actions/checkout@v5
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
       - name: Setup Node.js and install dependencies
         uses: ./.github/actions/setup_node
 
