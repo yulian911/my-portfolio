@@ -1,22 +1,15 @@
-// src/App.test.jsx
-import { render, screen, waitFor } from "@testing-library/react";
-import { expect, test } from "vitest";
+import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { test, expect } from "vitest";
 import App from "./App";
 
-test("renders portfolio app", async () => {
+test("renders public page footer", async () => {
   render(
     <MemoryRouter initialEntries={["/"]}>
       <App />
     </MemoryRouter>,
   );
 
-  await waitFor(() => {
-    // Użyj realnych selektorów z Public.jsx, np.:
-    expect(screen.getByText(/skills/i)).toBeInTheDocument();
-    // lub
-    expect(screen.getByAltText(/logo/i)).toBeInTheDocument();
-    // lub
-    expect(screen.getByRole("button")).toBeInTheDocument();
-  });
+  expect(await screen.findByText(/J4SK13R/i)).toBeInTheDocument();
+  expect(screen.getByText(/ALL RIGHTS RESERVED/i)).toBeInTheDocument();
 });
