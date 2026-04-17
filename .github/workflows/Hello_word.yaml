@@ -1,6 +1,7 @@
 name: CD/CI Pipeline
 
-on: push
+# on: push
+on: workflow_dispatch
 
 jobs:
   greetings:

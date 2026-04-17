@@ -1,0 +1,14 @@
+name: Deploy Dist folder
+
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest code
+        run: |
+          echo "Fetching latest code from main branch ${{toJson(github)}}"
+          git clone  https://github.com/yulian911/${{github.repository}}.git myfiles
+          cd myfiles && ls -la
