@@ -1,9 +1,19 @@
-// src/App.test.jsx
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { expect, test } from "vitest";
-import App from "./App"; // dostosuj ścieżkę do głównego komponentu
+import { MemoryRouter } from "react-router-dom";
+import App from "./App";
 
-test("renders portfolio app", () => {
-  render(<App />);
-  expect(screen.getByText(/portfolio/i)).toBeInTheDocument();
+test("renders portfolio app", async () => {
+  render(
+    <MemoryRouter initialEntries={["/"]}>
+      {" "}
+      {/* symuluje stronę główną */}
+      <App />
+    </MemoryRouter>,
+  );
+
+  // Poczekaj na lazy loading z Suspense
+  await waitFor(() => {
+    expect(screen.getByRole("heading")).toBeInTheDocument(); // dostosuj
+  });
 });
