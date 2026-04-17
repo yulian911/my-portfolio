@@ -9,20 +9,26 @@ jobs:
     steps:
       - name: Get latest code
         uses: actions/checkout@v5
-      - name: setup Node.js
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-      - name: print node version
+          node-version: 22
+          cache: npm
+
+      - name: Print node version
         run: node -v
+
+      - name: Clean bad Windows lock artifacts
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Install dependencies
         run: npm install
-      - name: run test
-        run: npm  run test
-      - name: complted
-        run: echo "Deployment completed successfully"
 
-        # run: |
-        #   echo "Fetching latest code from main branch"
-        #   git clone  https://github.com/${{github.repository}}.git myfiles
-        #   cd myfiles && ls -la
+      - name: Run test
+        run: npm run test
+
+      - name: Completed
+        run: echo "Deployment completed successfully"
