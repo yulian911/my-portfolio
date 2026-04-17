@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Get latest code
         run: |
-          echo "Fetching latest code from main branch ${{toJson(github)}}"
+          echo "Fetching latest code from main branch"
           git clone  https://github.com/yulian911/my-portfolio.git myfiles
           cd myfiles && ls -la
