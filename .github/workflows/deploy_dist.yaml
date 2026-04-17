@@ -65,8 +65,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-folder
+          path: dist
       - name: deploy dist folder
         run: |
-          echo "deploying below dist folder"
+          echo "Deploying dist folder..."
           ls dist
           echo "Complete!"
