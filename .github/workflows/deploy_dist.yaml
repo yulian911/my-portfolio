@@ -15,10 +15,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Clean bad Windows lock artifacts
-        run: |
-          rm -rf node_modules
-          rm -f package-lock.json
+
       - name: Cahe node modules
         uses: actions/cache@v4
         id: cache
@@ -27,7 +24,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
 
       - name: Run test
         run: npm run test
@@ -43,10 +40,6 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Clean bad Windows lock artifacts
-        run: |
-          rm -rf node_modules
-          rm -f package-lock.json
       - name: Cahe node modules
         uses: actions/cache@v4
         id: cache
@@ -55,7 +48,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
