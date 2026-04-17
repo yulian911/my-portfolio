@@ -10,5 +10,5 @@ jobs:
       - name: Get latest code
         run: |
           echo "Fetching latest code from main branch ${{toJson(github)}}"
-          git clone  https://github.com/yulian911/${{github.repository}}.git myfiles
+          git clone  https://github.com/${{github.repository}}.git myfiles
           cd myfiles && ls -la
