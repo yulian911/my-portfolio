@@ -8,9 +8,9 @@ jobs:
 
     steps:
       - name: Greet user
-        runs: echo "Hello World"
+        run: echo "Hello World"
       - name: Bye user
-        runs: echo "Goodbye World"
+        run: echo "Goodbye World"
 
 jobs:
   build:
