@@ -1,9 +1,9 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Spinner from './components/Spinner/Spinner'
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Spinner from "./components/Spinner/Spinner";
 
-const Public = React.lazy(() => import('./pages/Public'))
-const Login = React.lazy(() => import('./pages/Login'))
+const Public = React.lazy(() => import("./pages/Public"));
+const Login = React.lazy(() => import("./pages/Login"));
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
