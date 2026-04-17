@@ -2,7 +2,7 @@ name: CD/CI Pipeline
 
 on: push
 
-job:
+jobs:
   greetings:
     runs-on: ubuntu-latest
 
